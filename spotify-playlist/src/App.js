@@ -1,15 +1,9 @@
 import React from "react";
-import Playlist from "./Playlist";
+import Playlist from "./Components/Playlist";
+import PlayButton from "./Components/PlayButton";
+import DeleteButton from "./Components/PlayButton";
 
-export default ({
-  title,
-  description,
-  genre,
-  author,
-  release,
-  album,
-  image,
-}) => {
+export default function App() {
   const playlist = [
     {
       title: "Your're Somebody Else",
@@ -38,8 +32,7 @@ export default ({
       author: "Toby Johnson",
       release: 2015,
       album: "Fox - EP",
-      image:
-        "https://images.genius.com/11193a458479da054f04da51ee4ef16d.313x313x1.jpg",
+      image: "https://images.genius.com/11193a458479da054f04da51ee4ef16d.313x313x1.jpg",
     },
 
     {
@@ -72,6 +65,7 @@ export default ({
       image: "https://i.ytimg.com/vi/1RPPnYEpH2s/maxresdefault.jpg",
     },
   ];
+
   return (
     <div className="App">
       <h1>playlist</h1>
@@ -88,4 +82,4 @@ export default ({
       ))}
     </div>
   );
-};
+}
