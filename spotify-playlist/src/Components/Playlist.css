@@ -1,0 +1,37 @@
+img {
+  width: 15%;
+}
+
+span {
+  margin: 0 2em;
+}
+
+.author {
+  font-style: italic;
+}
+
+.song {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.text {
+  background: grey;
+  width: 50%;
+}
+
+.buttons {
+  background: cadetblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  font-style: italic;
+}
+
+.album {
+  margin: 0.5em 0;
+}
