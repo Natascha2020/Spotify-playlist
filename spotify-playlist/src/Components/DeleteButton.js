@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function DeleteButton({ value }) {
+//Creating delete-button with properties to be reusable
+export default function DeleteButton({ value, handleClick }) {
   return (
     <div>
-      <button>{value}</button>
+      <button onClick={handleClick}>{value}</button>
     </div>
   );
 }
