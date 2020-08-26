@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Playlist from "./Components/Playlist";
-import PlayButton from "./Components/PlayButton";
-import DeleteButton from "./Components/PlayButton";
+/* import PlayButton from "./Components/PlayButton";
+import DeleteButton from "./Components/DeleteButton"; */
+import CSS from "./App.css";
 
 export default function App() {
-  const playlist = [
+  const [songs, setSongs] = useState([
     {
       title: "Your're Somebody Else",
       description: "Chilling",
@@ -64,21 +65,24 @@ export default function App() {
       album: "An Awesome Wave",
       image: "https://i.ytimg.com/vi/1RPPnYEpH2s/maxresdefault.jpg",
     },
-  ];
+  ]);
 
   return (
     <div className="App">
-      <h1>playlist</h1>
-      {playlist.map((element) => (
-        <Playlist
-          title={element.title}
-          description={element.description}
-          genre={element.genre}
-          author={element.author}
-          release={element.release}
-          album={element.album}
-          image={element.image}
-        />
+      <h1>Playlist</h1>
+      {songs.map((element, index) => (
+        <div key={songs.element}>
+          <Playlist
+            title={element.title}
+            description={element.description}
+            genre={element.genre}
+            author={element.author}
+            release={element.release}
+            album={element.album}
+            image={element.image}
+            item={index}
+          />
+        </div>
       ))}
     </div>
   );

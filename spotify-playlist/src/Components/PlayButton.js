@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function PlayButton() {
-  return <button>Trash</button>;
+export default function PlayButton({ value }) {
+  return (
+    <div>
+      <button>{value}</button>
+    </div>
+  );
 }
