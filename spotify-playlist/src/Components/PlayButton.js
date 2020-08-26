@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function PlayButton({ value }) {
+//Creating play-button with properties to be reusable
+export default function PlayButton({ value, handleClick }) {
   return (
     <div>
-      <button>{value}</button>
+      <button onClick={handleClick}>{value}</button>
     </div>
   );
 }
