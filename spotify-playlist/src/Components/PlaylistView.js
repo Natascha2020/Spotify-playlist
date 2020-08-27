@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Playlist from "./Playlist";
 import FixedHeader from "./FixedHeader.js";
 import * as externalData from "../Data/SongData";
@@ -6,7 +6,14 @@ import "../App.css";
 
 export default function PlaylistView() {
   //Creating state variable with importet Data list as initial state
-  const [songs, setSongs] = useState(externalData.SongData);
+  const [songs, setSongs] = useState([]);
+
+  // Adding the delay function
+  useEffect(() => {
+    setTimeout(() => {
+      setSongs(externalData.SongData);
+    }, 5000);
+  }, []);
 
   //Creating function for play-Button using index of song-element
   const handlePlayItem = (indexToPlay) => {
@@ -28,22 +35,26 @@ export default function PlaylistView() {
   return (
     <div className="App">
       <FixedHeader />
-      {songs.map((element, index) => (
-        <div key={`song-${index}`}>
-          <Playlist
-            title={element.title}
-            description={element.description}
-            genre={element.genre}
-            author={element.author}
-            release={element.release}
-            album={element.album}
-            image={element.image}
-            itemIndex={index}
-            playHandler={handlePlayItem}
-            removeHandler={handleRemoveItem}
-          />
-        </div>
-      ))}
+      {songs.length ? (
+        songs.map((element, index) => (
+          <div key={`song-${index}`}>
+            <Playlist
+              title={element.title}
+              description={element.description}
+              genre={element.genre}
+              author={element.author}
+              release={element.release}
+              album={element.album}
+              image={element.image}
+              itemIndex={index}
+              playHandler={handlePlayItem}
+              removeHandler={handleRemoveItem}
+            />
+          </div>
+        ))
+      ) : (
+        <h1>Test</h1>
+      )}
     </div>
   );
 }
