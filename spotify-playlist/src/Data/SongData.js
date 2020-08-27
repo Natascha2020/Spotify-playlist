@@ -1,5 +1,4 @@
 //Data to be imported to the PlaylistView
-
 export const SongData = [
   {
     title: "Your're Somebody Else",
@@ -8,7 +7,7 @@ export const SongData = [
     author: "flora cash",
     release: 2018,
     album: "Nothing Lasts Forever",
-    image: "https://m.media-amazon.com/images/I/813nbxIrefL._SS500_.jpg",
+    image: "https://m.media-amazon.com/images/I/813nbxIrefL._SS500_.jpg"
   },
 
   {
@@ -18,7 +17,7 @@ export const SongData = [
     author: "Jordy Maxwell",
     release: 2017,
     album: "Honest",
-    image: "https://i.ytimg.com/vi/wIjFuJirwPE/maxresdefault.jpg",
+    image: "https://i.ytimg.com/vi/wIjFuJirwPE/maxresdefault.jpg"
   },
 
   {
@@ -28,7 +27,8 @@ export const SongData = [
     author: "Toby Johnson",
     release: 2015,
     album: "Fox - EP",
-    image: "https://images.genius.com/11193a458479da054f04da51ee4ef16d.313x313x1.jpg",
+    image:
+      "https://images.genius.com/11193a458479da054f04da51ee4ef16d.313x313x1.jpg"
   },
 
   {
@@ -38,7 +38,7 @@ export const SongData = [
     author: "Vance Joy",
     release: 2018,
     album: " triple j Live At The Wireless - One Night Stand",
-    image: "https://i.ytimg.com/vi/U0yo2XqufgU/maxresdefault.jpg",
+    image: "https://i.ytimg.com/vi/U0yo2XqufgU/maxresdefault.jpg"
   },
 
   {
@@ -48,7 +48,7 @@ export const SongData = [
     author: "Two Door Cinema Club",
     release: 2010,
     album: "Tourist History",
-    image: "https://m.media-amazon.com/images/I/81Dz9dweOGL._SS500_.jpg",
+    image: "https://m.media-amazon.com/images/I/81Dz9dweOGL._SS500_.jpg"
   },
 
   {
@@ -58,6 +58,6 @@ export const SongData = [
     author: "alt-J",
     release: 2018,
     album: "An Awesome Wave",
-    image: "https://i.ytimg.com/vi/1RPPnYEpH2s/maxresdefault.jpg",
-  },
+    image: "https://i.ytimg.com/vi/1RPPnYEpH2s/maxresdefault.jpg"
+  }
 ];
