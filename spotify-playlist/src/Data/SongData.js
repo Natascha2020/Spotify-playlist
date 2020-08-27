@@ -7,7 +7,7 @@ export const SongData = [
     genre: "Alternative",
     author: "flora cash",
     release: 2018,
-    album: "Nothing Lasts Forever (And It's Fine)",
+    album: "Nothing Lasts Forever",
     image: "https://m.media-amazon.com/images/I/813nbxIrefL._SS500_.jpg",
   },
 

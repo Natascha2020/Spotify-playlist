@@ -46,20 +46,21 @@ export default function Playlist({
             <div className="description">{description}</div>
           </div>
 
-          <div className="buttons">
-            <PlayButton
-              value="Play now"
-              handleClick={(e) => {
-                playSong(e, itemIndex);
-              }}
-            />
-            <DeleteButton
-              value="Delete"
-              handleClick={(e) => {
-                deleteSong(e, itemIndex);
-              }}
-            />
-          </div>
+
+        <div className="buttons">
+          <PlayButton
+            value="Play"
+            handleClick={(e) => {
+              playSong(e, itemIndex);
+            }}
+          />
+          <DeleteButton
+            value="Delete"
+            handleClick={(e) => {
+              deleteSong(e, itemIndex);
+            }}
+          />
+
         </div>
       </div>
     </>
