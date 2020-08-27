@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Playlist from "./Playlist";
-import "../App.css";
+import FixedHeader from "./FixedHeader.js";
 import * as externalData from "../Data/SongData";
+import "../App.css";
 
 export default function PlaylistView() {
   //Creating state variable with importet Data list as initial state
@@ -15,7 +16,9 @@ export default function PlaylistView() {
   //Creating function for delete-Button using index of song-element to delete by filtering an array without selected song-element
   const handleRemoveItem = (indexToDelete) => {
     /* console.log("deleting index: " + indexToDelete); */
-    let updatedSongs = songs.filter((element, index) => index !== indexToDelete);
+    let updatedSongs = songs.filter(
+      (element, index) => index !== indexToDelete
+    );
     // ... ensures that REACT recognizes the changes inside the filtered array and therefore re-renders
     setSongs([...updatedSongs]);
   };
@@ -24,6 +27,7 @@ export default function PlaylistView() {
   // Passing functions to manage state as properties to child for beeing able to access
   return (
     <div className="App">
+      <FixedHeader />
       {songs.map((element, index) => (
         <div key={`song-${index}`}>
           <Playlist
