@@ -5,18 +5,7 @@ import FixedHeader from "./FixedHeader.js";
 import "./Playlist.css";
 
 //Creating blueprint for song-Layout and Button-Functions
-export default function Playlist({
-  title,
-  description,
-  genre,
-  author,
-  release,
-  album,
-  image,
-  itemIndex,
-  playHandler,
-  removeHandler
-}) {
+export default function Playlist({ title, description, genre, author, release, album, image, itemIndex, playHandler, removeHandler }) {
   //Creating button-events by accessing Song-Data through play-Handler property from parent(PlaylistView) using index of each song
   const playSong = (e, itemIndex) => {
     playHandler(itemIndex);
@@ -28,7 +17,7 @@ export default function Playlist({
 
   //Importing Play- and Deletebutton and calling respective events (playSong and deleteSong)
   return (
-    <>
+    <div>
       <FixedHeader />
       <div className="Playlist">
         <div className="song">
@@ -46,23 +35,22 @@ export default function Playlist({
             <div className="description">{description}</div>
           </div>
 
-
-        <div className="buttons">
-          <PlayButton
-            value="Play"
-            handleClick={(e) => {
-              playSong(e, itemIndex);
-            }}
-          />
-          <DeleteButton
-            value="Delete"
-            handleClick={(e) => {
-              deleteSong(e, itemIndex);
-            }}
-          />
-
+          <div className="buttons">
+            <PlayButton
+              value="Play"
+              handleClick={(e) => {
+                playSong(e, itemIndex);
+              }}
+            />
+            <DeleteButton
+              value="Delete"
+              handleClick={(e) => {
+                deleteSong(e, itemIndex);
+              }}
+            />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
