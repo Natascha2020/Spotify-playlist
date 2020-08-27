@@ -1,9 +1,12 @@
 import React from "react";
+import PlaylistView from "./Components/PlaylistView.js";
 import "./App.css";
-import Playlist from "./Playlist";
 
-function App() {
-  return <div className="App"></div>;
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Playlist</h1>
+      <PlaylistView />
+    </div>
+  );
 }
-
-export default App;
