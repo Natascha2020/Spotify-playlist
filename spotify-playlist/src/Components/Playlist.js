@@ -34,7 +34,7 @@ export default function Playlist({ title, description, genre, author, release, a
 
         <div className="buttons">
           <PlayButton
-            value="Play now"
+            value="Play"
             handleClick={(e) => {
               playSong(e, itemIndex);
             }}
