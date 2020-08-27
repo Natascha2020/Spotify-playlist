@@ -1,11 +1,15 @@
 img {
   width: 15%;
+  min-width: 210px;
 }
 
 span {
   margin: 0 2em;
 }
 
+button {
+  margin: 0.5em 0;
+}
 .author {
   font-style: italic;
 }
@@ -19,6 +23,7 @@ span {
 .text {
   background: grey;
   width: 50%;
+  padding: 1em 0;
 }
 
 .buttons {
@@ -26,6 +31,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 10%;
 }
 
 .description {
@@ -34,4 +40,34 @@ span {
 
 .album {
   margin: 0.5em 0;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  button {
+    padding: 0.5em;
+    width: 80%;
+    margin: 0.5em;
+  }
+
+  img {
+    width: 25%;
+    margin-top: 2em;
+    display: none;
+  }
+  .song {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    min-width: 380px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    width: 50%;
+  }
 }
