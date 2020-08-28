@@ -1,8 +1,3 @@
-.loading-screen {
-  height: 615px;
-  background-color: #a8dadc;
-}
-
 span {
   margin: 0 2em;
 }
@@ -25,7 +20,6 @@ button {
   justify-content: center;
   margin-bottom: 1em;
   color: white;
-  background-color: #a8dadc;
 }
 
 .text {
