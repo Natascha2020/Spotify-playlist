@@ -1,6 +1,6 @@
-.Playlist img {
-  width: 15%;
-  min-width: 210px;
+.loading-screen {
+  height: 615px;
+  background-color: #a8dadc;
 }
 
 span {
@@ -10,6 +10,12 @@ span {
 button {
   margin: 0.5em 0;
 }
+
+.Playlist img {
+  width: 15%;
+  min-width: 210px;
+}
+
 .author {
   font-style: italic;
 }
@@ -19,6 +25,7 @@ button {
   justify-content: center;
   margin-bottom: 1em;
   color: white;
+  background-color: #a8dadc;
 }
 
 .text {
@@ -33,6 +40,7 @@ button {
   flex-direction: column;
   justify-content: center;
   width: 10%;
+  min-width: 100px;
 }
 
 .description {

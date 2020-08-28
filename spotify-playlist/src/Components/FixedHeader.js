@@ -18,16 +18,16 @@ function FixedHeader(props) {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
-    target: window ? window() : undefined
+    target: window ? window() : undefined,
   });
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0
+    elevation: trigger ? 4 : 0,
   });
 }
 
+//Creating header and using selected song-data which were passed as updated value(useState) from Playlist-View
 export default function ElevateAppBar(props) {
-  //console.log(props.playedSong);
   return (
     <>
       <CssBaseline />
@@ -43,16 +43,10 @@ export default function ElevateAppBar(props) {
             )}
             {props.playedSong ? (
               <div>
-                <img
-                  className="song-image"
-                  src={props.playedSong.image}
-                  alt={"Cover for " + props.playedSong.title}
-                />
+                <img className="song-image" src={props.playedSong.image} alt={"Cover for " + props.playedSong.title} />
                 <div className="song-details">
                   <div className="song-title">{props.playedSong.title}</div>
-                  <div className="song-artist">
-                    by {props.playedSong.author}
-                  </div>
+                  <div className="song-artist">by {props.playedSong.author}</div>
                 </div>
               </div>
             ) : (
