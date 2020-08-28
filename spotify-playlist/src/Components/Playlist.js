@@ -5,7 +5,18 @@ import DeleteButton from "./DeleteButton";
 import "./Playlist.css";
 
 //Creating blueprint for song-Layout and Button-Functions
-export default function Playlist({ title, description, genre, author, release, album, image, itemIndex, playHandler, removeHandler }) {
+export default function Playlist({
+  title,
+  description,
+  genre,
+  author,
+  release,
+  album,
+  image,
+  itemIndex,
+  playHandler,
+  removeHandler,
+}) {
   //Creating button-events by accessing Song-Data through play-Handler property from parent(PlaylistView) using index of each song
   const playSong = (e, itemIndex) => {
     playHandler(itemIndex);
@@ -17,11 +28,9 @@ export default function Playlist({ title, description, genre, author, release, a
 
   //Importing Play- and Deletebutton and calling respective events (playSong and deleteSong)
   return (
-
     <div className="Playlist">
       <div className="song">
         <img src={image} className="Image" alt="" />
-
 
         <div className="text">
           <h2 className="title">{title}</h2>

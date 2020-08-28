@@ -18,16 +18,17 @@ button {
   display: flex;
   justify-content: center;
   margin-bottom: 1em;
+  color: white;
 }
 
 .text {
-  background: grey;
+  background: #1d3557;
   width: 50%;
   padding: 1em 0;
 }
 
 .buttons {
-  background: cadetblue;
+  background: #457b9d;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,6 +41,48 @@ button {
 
 .album {
   margin: 0.5em 0;
+}
+
+.playbtn {
+  font-size: 20px;
+  background-color: #43aa8b;
+  color: white;
+  border: none;
+  border-radius: 15px 5px;
+  padding: 5px 20px 5px;
+}
+
+.playbtn:hover {
+  background-color: #4d908e;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.playbtn:active {
+  background-color: #577590;
+  color: #f9c74f;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+.deletebtn {
+  font-size: 20px;
+  background-color: #f3722c;
+  color: white;
+  border: none;
+  border-radius: 15px 5px;
+  padding: 5px 10px 5px;
+}
+
+.deletebtn:hover {
+  background-color: #f94144;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.deletebtn:active {
+  background-color: #f94144;
+  color: #f9c74f;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
 }
 
 @media screen and (max-width: 700px) {
